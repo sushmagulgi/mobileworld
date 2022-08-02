@@ -28,7 +28,15 @@ public class Signup {
 		driver.findElement(By.xpath("(//input[@name='gender'])[1]")).click();
 		driver.findElement(By.xpath("(//input[@name='gender'])[2]")).click();
 		driver.findElement(By.xpath("//input[@type='number']")).sendKeys("9876543219");
-		driver.findElement(By.xpath("(//input[@name='gender'])[1]")).click();
+		driver.findElement(By.xpath("//textarea[@rows='3']")).sendKeys("Im waiting for registration");
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		driver.switchTo().alert().accept();
+		driver.findElement(By.xpath("//button[@type='Submit']")).click();
+		driver.switchTo().alert().accept();
+		driver.findElement(By.id("username")).sendKeys("ertyu");
+		driver.findElement(By.id("password")).sendKeys("sdf@345");
+		driver.findElement(By.xpath("//label[@for=\"remember-me\"]")).click();
+		driver.findElement(By.xpath("//a[@type='submit']")).click();
 	}
 	
 	
