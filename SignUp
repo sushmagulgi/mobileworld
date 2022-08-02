@@ -25,5 +25,11 @@ public class Signup {
 		driver.findElement (By.xpath ("//input[@type='Email']")).sendKeys("anzzzzz22@gmail.com");
 		driver.findElement(By.xpath ("//input[@type='Password']")).sendKeys("Aneri@109");
 		driver.findElement(By.xpath("//input[@type='date']")).sendKeys("12/08/1995");
-	
+		driver.findElement(By.xpath("(//input[@name='gender'])[1]")).click();
+		driver.findElement(By.xpath("(//input[@name='gender'])[2]")).click();
+		driver.findElement(By.xpath("//input[@type='number']")).sendKeys("9876543219");
+		driver.findElement(By.xpath("(//input[@name='gender'])[1]")).click();
 	}
+	
+	
+}
