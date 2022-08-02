@@ -20,9 +20,10 @@ public class Signup {
 
 		driver.findElement (By.xpath ("//button[@type='submit']")).click();
 		driver.findElement (By.xpath ("//a[.='Sign up']")).click();
-		
+		driver.findElement(By.xpath ("//input[@placeholder='First Name']")).sendKeys("asmaa");
+		driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("password");
+		driver.findElement (By.xpath ("//input[@type='Email']")).sendKeys("anzzzzz22@gmail.com");
+		driver.findElement(By.xpath ("//input[@type='Password']")).sendKeys("Aneri@109");
+		driver.findElement(By.xpath("//input[@type='date']")).sendKeys("12/08/1995");
+	
 	}
-	
-	
-}
-
