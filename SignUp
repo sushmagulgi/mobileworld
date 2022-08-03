@@ -31,12 +31,16 @@ public class Signup {
 		driver.findElement(By.xpath("//textarea[@rows='3']")).sendKeys("Im waiting for registration");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		driver.switchTo().alert().accept();
-		driver.findElement(By.xpath("//button[@type='Submit']")).click();
-		driver.switchTo().alert().accept();
+		driver.findElement(By.xpath("//button[.='Sign In']")).click();
+     	driver.switchTo().alert().accept();
 		driver.findElement(By.id("username")).sendKeys("ertyu");
 		driver.findElement(By.id("password")).sendKeys("sdf@345");
 		driver.findElement(By.xpath("//label[@for=\"remember-me\"]")).click();
-		driver.findElement(By.xpath("//a[@type='submit']")).click();
+		driver.findElement(By.xpath("//a[.='Log In']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//a[text()='More Details'])[1]")).click();
+		driver.findElement(By.xpath("(//a[text()='Order'])[2]")).click();
+
 	}
 	
 	
