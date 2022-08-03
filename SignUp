@@ -48,7 +48,15 @@ public class Signup {
 			String childId=it.next();
 			driver.switchTo().window(childId);
 		driver.findElement(By.id("inputFirstName")).sendKeys("sushma");
-
+        driver.findElement(By.xpath("(//input[@type='text'])[2]")).sendKeys("chabbi");
+        driver.findElement(By.xpath("//input[@type='email']")).sendKeys("sesha23@gmail.com");
+        driver.findElement(By.xpath("//input[@type='password']")).sendKeys("#seshsh@34");
+        driver.findElement(By.xpath("(//input[@type='radio'])[1]")).click();
+        driver.findElement(By.xpath("(//input[@type='radio'])[2]")).click();
+        driver.findElement(By.xpath("//input[@type='number']")).sendKeys("8976542113");
+        driver.findElement(By.xpath("(//input[@type='radio'])[2]")).click();
+        driver.findElement(By.xpath("(//input[@type='radio'])[2]")).click();
+        
 	}
 	
 	
