@@ -1,5 +1,7 @@
 package MobileTestCase;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -40,6 +42,12 @@ public class Signup {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//a[text()='More Details'])[1]")).click();
 		driver.findElement(By.xpath("(//a[text()='Order'])[2]")).click();
+		 Set<String>win=driver.getWindowHandles();
+			Iterator<String>it=win.iterator(); 
+			String parentId=it.next();
+			String childId=it.next();
+			driver.switchTo().window(childId);
+		driver.findElement(By.id("inputFirstName")).sendKeys("sushma");
 
 	}
 	
